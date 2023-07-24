@@ -1,0 +1,25 @@
+{% extends '_base.html' %}
+
+
+{% block title %}
+Home
+{% endblock title %}
+
+
+{% block content %}
+<div class="card shadow mt-4 col-lg-4">
+    <div class="card-header bg-primary  text-white shadow-sm"><b>Home page</b></div>
+    <div class="card-body">
+        {% if user.is_authenticated %}
+
+        <p> Welcome {{user.username}} | <a href="{% url 'account_logout' %}">Logout</a></p>
+        <a href="{% url 'account_set_password' %}" class="text-success">Change Your Password?</a>
+        {% else %}
+        <a href="{% url 'account_login' %}"> login</a>
+        <a href="{% url 'account_signup' %}"> Singup</a>
+    </div>
+</div>
+
+{% endif %}
+
+{% endblock content %}

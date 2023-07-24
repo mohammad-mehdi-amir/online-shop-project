@@ -1,0 +1,47 @@
+{% extends '_base.html' %}
+{% load crispy_forms_tags %}
+{% load static  %}
+{% block title %}
+Log out
+{% endblock title %}
+
+
+{% block style %}
+<link rel="stylesheet" href="{% static 'css/login.css'%}">
+    
+{% endblock style %}
+    
+
+{% block content %}
+<div class="d-flex justify-content-center mt-5" >
+    <div class="col-xl-3 col-lg-4 col-md-5 col-sm-5 col-xs-6 bg-white m-3 m-sm-5 border rounded px-4 pt-4 pb-3 shadow">
+<form action="" method="POST">
+    {% csrf_token %}
+      <!-- Button trigger modal -->
+<button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+    log out
+  </button>
+  
+  <!-- Modal -->
+  <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="staticBackdropLabel">Log uot</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          are you sure to log ot?
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">NO</button>
+          <button type="submit" class="btn btn-danger" >YES</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</form>
+    </div>
+
+</div>
+{% endblock content %}
