@@ -18,9 +18,8 @@ Home
             {% else %}
             <a href="{% url 'account_login' %}"> login</a>
             <a href="{% url 'account_signup' %}"> Singup</a>
+            {% endif %}
         </div>
     </div>
 </center>
-{% endif %}
-
 {% endblock content %}
