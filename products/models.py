@@ -11,10 +11,11 @@ class product(models.Model):
     price=models.PositiveIntegerField()
     status=models.BooleanField(default=True)
     
-    image=models.ImageField(upload_to='product_img/',blank=True)
+    image=models.ImageField(upload_to='product_img/')
     seller= models.CharField(max_length=100)
     
     def __str__(self):
         return self.title
 
-    
+    def get_absolute_url(self):
+        return reverse('detail_product', args=[self.id])
