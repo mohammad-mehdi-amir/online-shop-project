@@ -21,6 +21,6 @@ from . import views
 urlpatterns = [
     path('list_product/',views.ProductListView.as_view(),name='list_prodcut'),
     path('new_product/',views.NewProductView.as_view(),name='new_prodcut'),
-    path('<int:pk>/',views.ProductDetailView.as_view(),name='detail_product'),
+    path('<int:pk>/',views.product_detail_view,name='detail_product'),
 
 ]
