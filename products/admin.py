@@ -9,4 +9,4 @@ class productAdmin(ModelAdmin):
     
 @admin.register(comment) 
 class CommentAdmin(ModelAdmin):
-    list_display=['text','user','product','datetime_add']
+    list_display=['text','rate','user','product','datetime_add','active']

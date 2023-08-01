@@ -9,4 +9,4 @@ class new_product_form(forms.ModelForm):
 class commentForm(forms.ModelForm):
     class Meta:
         model=comment
-        fields=('text',)
+        fields=('text','rate')

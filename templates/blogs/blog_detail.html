@@ -1,0 +1,32 @@
+{% extends '_base.html' %}
+{% load i18n %}
+{% load equal_filter %}
+{% block content %}
+
+
+<div class="breadcrumb-area bg-color ptb--90 bg-danger rounded-3">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 ">
+                <div class="d-flex justify-content-between  align-items-center flex-sm-row flex-column">
+                    <h1 class="page-title text-white">{{blog.title}}</h1>
+                    
+                    {% if user.is_staff|are_equal:True  %}
+                        
+                    
+                    {% if user.username|are_equal:blog.author %}
+                    <a class="btn btn-warning" href="{% url 'blog_edit' blog.id %}">edit</a>
+                    {% endif %}
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container shadow"><p class="m-5">{{blog.text|linebreaks}}</p>
+<span>{% trans ' by :' %} <b>{{blog.author}}</b></span>
+</div>
+
+
+{% endblock content %}

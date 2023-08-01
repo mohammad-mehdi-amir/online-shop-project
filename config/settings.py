@@ -45,10 +45,12 @@ INSTALLED_APPS = [
     # my app
     'accounts',
     'products',
+    'blogs',
 
     # install app
     'crispy_forms',
     'crispy_bootstrap5',
+    'rosetta',
 ]
 
 MIDDLEWARE = [
@@ -123,13 +125,23 @@ AUTH_PASSWORD_VALIDATORS = [
 # https://docs.djangoproject.com/en/4.1/topics/i18n/
 
 LANGUAGE_CODE = 'en-us'
+# LANGUAGE_CODE = 'fa'
 
-TIME_ZONE = 'UTC'
+# TIME_ZONE = 'UTC'
+TIME_ZONE = 'Asia/Tehran'
 
 USE_I18N = True
-
+USE_L10N=True
 USE_TZ = True
 
+LOCALE_PATHS = [
+BASE_DIR.joinpath('locale')
+]
+
+LANGUAGES=(
+    ('en','English'),
+    ('fa','persian'),
+)
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
@@ -162,7 +174,7 @@ MEDIA_ROOT = str(BASE_DIR.joinpath('media'))
 SITE_ID = 1
 ACCOUNT_SESSION_REMEMBER = True
 ACCOUNT_SIGNUP_PASSWORD_ENTER_TWICE = False
-ACCOUNT_USERNAME_REQUIRED = False
-ACCOUNT_AUTHENTICATION_METHOD = 'email'
-ACCOUNT_EMAIL_REQUIRED = True
+ACCOUNT_USERNAME_REQUIRED = True
+ACCOUNT_AUTHENTICATION_METHOD = 'username'
+ACCOUNT_EMAIL_REQUIRED = False
 ACCOUNT_UNIQUE_EMAIL = True

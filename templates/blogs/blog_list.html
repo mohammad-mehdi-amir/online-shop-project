@@ -1,0 +1,27 @@
+{% extends '_base.html' %}
+{% load i18n %}
+
+{% block content %}
+    <div class="container">
+        
+        {% for blog in blogs %}
+        <a href="{% url 'blog_detail' blog.id %}"> <div class="card m-4">
+            <div class="card-header bg-danger text-white">
+              <b>{{blog.title}}</b>  
+            </div>
+            <div class="card-body">
+                <div class="card-subtitle">
+                    <span class="text-muted">{% trans 'date created :' %} {{blog.datetime_add}}
+                    </span>
+                </div>
+                <div class="card-text">
+                    {{blog.text|truncatewords:60}}
+                </div>
+            </div>
+        </div></a>
+           
+        {% endfor %}
+            
+    </div>
+{% endblock content %}
+    

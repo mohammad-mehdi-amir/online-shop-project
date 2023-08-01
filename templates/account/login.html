@@ -2,6 +2,7 @@
 {% load crispy_forms_tags %}
 {% load static  %}
 {% block title %}
+{% load i18n %}
 Login
 {% endblock title %}
 
@@ -24,7 +25,7 @@ Login
                     <a class="text-decoration-none" href="{% url 'account_reset_password' %}">فراموشی رمز عبور</a>
                 </div>
             </div>
-            <button type="submit" class="btn btn-success mt-3 w-100">ورود</button>
+            <button type="submit" class="btn btn-success mt-3 w-100">{% trans 'login' %}</button>
             <div class="line-with-middle-sep">
                   <span>
                     یا

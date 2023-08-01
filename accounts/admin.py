@@ -11,4 +11,4 @@ class CustomUserAdmin(UserAdmin):
     model = Customuser
     add_form = CustomUserCreationForm
     form = CustomUserChangeForm
-    list_display = ('email', 'username')
+    list_display = ('email', 'username','is_staff')
