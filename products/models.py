@@ -2,10 +2,11 @@ from django.db import models
 from django.urls import reverse
 from django.contrib.auth import get_user_model
 from django.utils.translation import gettext_lazy as _
+from ckeditor.fields import RichTextField
 # Create your models here.
 class product(models.Model):
     title=models.CharField(max_length=100)
-    des=models.TextField()
+    des=RichTextField()
     
     datetime_add=models.DateTimeField(auto_now_add=True)
     datetime_edit=models.DateTimeField(auto_now=True)

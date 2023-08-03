@@ -8,104 +8,178 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-07-31 12:43+0330\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"POT-Creation-Date: 2023-08-02 12:28+0330\n"
+"PO-Revision-Date: 2023-08-02 12:30+0330\n"
+"Last-Translator:   <mm@mm.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Translated-Using: django-rosetta 0.9.9\n"
 
-#: templates/_base.html:101
+#: templates/_base.html:82
 msgid "home"
 msgstr "خانه"
 
-#: templates/_base.html:106
+#: templates/_base.html:87
 msgid "weblog"
 msgstr "وبلاگ"
 
-#: templates/_base.html:111
+#: templates/_base.html:92
 msgid "products"
 msgstr "محصولات"
 
-#: templates/_base.html:116 templates/_base.html:189
+#: templates/_base.html:97 templates/_base.html:180
 msgid "contact us"
 msgstr "تماس با ما"
 
-#: templates/_base.html:187
+#: templates/_base.html:123
+msgid "profile"
+msgstr "حساب کاربری"
+
+#: templates/_base.html:126 templates/_base.html:244
+msgid "go to cart"
+msgstr "اضافه به سبد خرید"
+
+#: templates/_base.html:129
+msgid "wishlist"
+msgstr "علاقه مندي ها"
+
+#: templates/_base.html:132
+msgid "order history"
+msgstr "تاریخچه سفارشات"
+
+#: templates/_base.html:178
 msgid "about us"
 msgstr "درباره ما"
 
-#: templates/_base.html:188
-msgid "Terms and Conditions"
-msgstr "قوانین و مقررات"
+#: templates/_base.html:179
+msgid "Terms and Conditions |"
+msgstr "قوانین و مقررات |"
 
-#: templates/account/login.html:28
-msgid "login"
-msgstr "ورود"
+#: templates/_base.html:197
+msgid "Start typing and press Enter to search"
+msgstr "به دنبال چه میگردید؟"
 
-#: templates/products/detail_product.html:12
-msgid "detail of product"
-msgstr "جزئیات محصول"
-
-#: templates/products/detail_product.html:35
+#: templates/_base.html:230 templates/cart/cart_detail.html:68
+#: templates/cart/cart_detail.html:137
+#: templates/products/detail_product.html:38
 #: templates/products/list_product.html:57
 msgid "$"
 msgstr "تومان"
 
-#: templates/products/detail_product.html:47
-msgid "Add to cart"
-msgstr "اضافه به سبد خرید"
+#: templates/_base.html:240 templates/cart/cart_detail.html:133
+msgid "total price"
+msgstr "جمع کل"
 
-#: templates/products/detail_product.html:51
-msgid "Category :"
-msgstr "دسته بندی"
+#: templates/_base.html:245
+msgid "peyment"
+msgstr "پرداخت"
 
-#: templates/products/detail_product.html:67
-msgid "Product description"
-msgstr "توضیحات محصول"
+#: templates/account/login.html:29 templates/products/detail_product.html:186
+msgid "login"
+msgstr "ورود"
 
-#: templates/products/detail_product.html:71
-msgid "Propertes"
-msgstr "ویژگی"
+#: templates/blogs/blog_detail.html:18
+msgid "edit"
+msgstr "ویرایش"
 
-#: templates/products/detail_product.html:75
-msgid "comments"
-msgstr "دیدگاه"
+#: templates/blogs/blog_detail.html:28
+msgid " by :"
+msgstr "بوسیله :"
 
-#: templates/products/detail_product.html:91
-msgid "Weight"
-msgstr "وزن"
-
-#: templates/products/detail_product.html:92
-msgid "grams"
-msgstr "گرم"
-
-#: templates/products/detail_product.html:95
-msgid "size"
-msgstr "سایز"
-
-#: templates/products/detail_product.html:99
-msgid "colors"
-msgstr "رنگ"
-
-#: templates/products/detail_product.html:114
-msgid "comments for"
-msgstr " دیدگاه برای "
-
-#: templates/products/detail_product.html:150
-msgid "write your comment"
-msgstr "دیدگاه خود را بنویسید"
-
-#: templates/products/detail_product.html:161
+#: templates/blogs/blog_edit.html:9 templates/products/detail_product.html:179
 msgid "submit"
 msgstr "ارسال"
 
+#: templates/blogs/blog_list.html:14
+msgid "date created :"
+msgstr "تاريخ ساخت"
+
+#: templates/cart/cart_detail.html:17
+msgid "cart"
+msgstr "سبد خرید"
+
+#: templates/cart/cart_detail.html:81
+msgid "update"
+msgstr "به روز رسانی"
+
+#: templates/cart/cart_detail.html:94
+msgid "cart is empty"
+msgstr "سبد خرید خالی است"
+
+#: templates/cart/cart_detail.html:97
+#, fuzzy
+#| msgid "products"
+msgid "go to products"
+msgstr "محصولات"
+
+#: templates/cart/cart_detail.html:116
+msgid "clean cart"
+msgstr "خالی کردن سبد خرید"
+
+#: templates/cart/cart_detail.html:144
+msgid "submit orders"
+msgstr "ثبت سفارشات"
+
+#: templates/products/detail_product.html:14
+msgid "detail of product"
+msgstr "جزئیات محصول"
+
+#: templates/products/detail_product.html:51
+#: templates/products/list_product.html:72
+msgid "Add to cart"
+msgstr "اضافه به سبد خرید"
+
+#: templates/products/detail_product.html:59
+msgid "Category :"
+msgstr "دسته بندی"
+
+#: templates/products/detail_product.html:75
+msgid "Product description"
+msgstr "توضیحات محصول"
+
+#: templates/products/detail_product.html:79
+msgid "Propertes"
+msgstr "ویژگی"
+
+#: templates/products/detail_product.html:83
+msgid "comments"
+msgstr "دیدگاه"
+
+#: templates/products/detail_product.html:99
+msgid "Weight"
+msgstr "وزن"
+
+#: templates/products/detail_product.html:100
+msgid "grams"
+msgstr "گرم"
+
+#: templates/products/detail_product.html:103
+msgid "size"
+msgstr "سایز"
+
+#: templates/products/detail_product.html:107
+msgid "colors"
+msgstr "رنگ"
+
+#: templates/products/detail_product.html:123
+msgid "comments for"
+msgstr " دیدگاه برای "
+
+#: templates/products/detail_product.html:167
+msgid "write your comment"
+msgstr "دیدگاه خود را بنویسید"
+
+#: templates/products/detail_product.html:186
+msgid "for write  comment please"
+msgstr "برای نوشتن کامنت لطفا"
+
 #: venv/lib/python3.11/site-packages/django/contrib/messages/apps.py:15
 msgid "Messages"
-msgstr ""
+msgstr "پیام"
 
 #: venv/lib/python3.11/site-packages/django/contrib/sitemaps/apps.py:8
 msgid "Site Maps"
@@ -162,8 +236,8 @@ msgstr ""
 
 #: venv/lib/python3.11/site-packages/django/core/validators.py:267
 msgid ""
-"Enter a valid “slug” consisting of Unicode letters, numbers, underscores, or "
-"hyphens."
+"Enter a valid “slug” consisting of Unicode letters, numbers, underscores, or"
+" hyphens."
 msgstr ""
 
 #: venv/lib/python3.11/site-packages/django/core/validators.py:279
@@ -363,15 +437,15 @@ msgstr ""
 #: venv/lib/python3.11/site-packages/django/db/models/fields/__init__.py:1489
 #, python-format
 msgid ""
-"“%(value)s” value has an invalid format. It must be in YYYY-MM-DD HH:MM[:ss[."
-"uuuuuu]][TZ] format."
+"“%(value)s” value has an invalid format. It must be in YYYY-MM-DD "
+"HH:MM[:ss[.uuuuuu]][TZ] format."
 msgstr ""
 
 #: venv/lib/python3.11/site-packages/django/db/models/fields/__init__.py:1497
 #, python-format
 msgid ""
-"“%(value)s” value has the correct format (YYYY-MM-DD HH:MM[:ss[.uuuuuu]]"
-"[TZ]) but it is an invalid date/time."
+"“%(value)s” value has the correct format (YYYY-MM-DD "
+"HH:MM[:ss[.uuuuuu]][TZ]) but it is an invalid date/time."
 msgstr ""
 
 #: venv/lib/python3.11/site-packages/django/db/models/fields/__init__.py:1502
@@ -390,8 +464,8 @@ msgstr ""
 #: venv/lib/python3.11/site-packages/django/db/models/fields/__init__.py:1789
 #, python-format
 msgid ""
-"“%(value)s” value has an invalid format. It must be in [DD] [[HH:]MM:]ss[."
-"uuuuuu] format."
+"“%(value)s” value has an invalid format. It must be in [DD] "
+"[[HH:]MM:]ss[.uuuuuu] format."
 msgstr ""
 
 #: venv/lib/python3.11/site-packages/django/db/models/fields/__init__.py:1793
@@ -550,7 +624,8 @@ msgid "Many-to-many relationship"
 msgstr ""
 
 #. Translators: If found as last label character, these punctuation
-#. characters will prevent the default label_suffix to be appended to the label
+#. characters will prevent the default label_suffix to be appended to the
+#. label
 #: venv/lib/python3.11/site-packages/django/forms/boundfield.py:184
 msgid ":?.!"
 msgstr ""
@@ -600,7 +675,8 @@ msgstr ""
 
 #: venv/lib/python3.11/site-packages/django/forms/fields.py:625
 #, python-format
-msgid "Ensure this filename has at most %(max)d character (it has %(length)d)."
+msgid ""
+"Ensure this filename has at most %(max)d character (it has %(length)d)."
 msgid_plural ""
 "Ensure this filename has at most %(max)d characters (it has %(length)d)."
 msgstr[0] ""
@@ -708,7 +784,8 @@ msgid "The inline value did not match the parent instance."
 msgstr ""
 
 #: venv/lib/python3.11/site-packages/django/forms/models.py:1429
-msgid "Select a valid choice. That choice is not one of the available choices."
+msgid ""
+"Select a valid choice. That choice is not one of the available choices."
 msgstr ""
 
 #: venv/lib/python3.11/site-packages/django/forms/models.py:1568
@@ -1168,10 +1245,10 @@ msgstr ""
 
 #: venv/lib/python3.11/site-packages/django/views/csrf.py:127
 msgid ""
-"If you are using the <meta name=\"referrer\" content=\"no-referrer\"> tag or "
-"including the “Referrer-Policy: no-referrer” header, please remove them. The "
-"CSRF protection requires the “Referer” header to do strict referer checking. "
-"If you’re concerned about privacy, use alternatives like <a "
+"If you are using the <meta name=\"referrer\" content=\"no-referrer\"> tag or"
+" including the “Referrer-Policy: no-referrer” header, please remove them. "
+"The CSRF protection requires the “Referer” header to do strict referer "
+"checking. If you’re concerned about privacy, use alternatives like <a "
 "rel=\"noreferrer\" …> for links to third-party sites."
 msgstr ""
 
@@ -1223,8 +1300,8 @@ msgstr ""
 #: venv/lib/python3.11/site-packages/django/views/generic/dates.py:652
 #, python-format
 msgid ""
-"Future %(verbose_name_plural)s not available because %(class_name)s."
-"allow_future is False."
+"Future %(verbose_name_plural)s not available because "
+"%(class_name)s.allow_future is False."
 msgstr ""
 
 #: venv/lib/python3.11/site-packages/django/views/generic/dates.py:692
@@ -1280,10 +1357,10 @@ msgstr ""
 #: venv/lib/python3.11/site-packages/django/views/templates/default_urlconf.html:221
 #, python-format
 msgid ""
-"You are seeing this page because <a href=\"https://docs.djangoproject.com/en/"
-"%(version)s/ref/settings/#debug\" target=\"_blank\" "
-"rel=\"noopener\">DEBUG=True</a> is in your settings file and you have not "
-"configured any URLs."
+"You are seeing this page because <a "
+"href=\"https://docs.djangoproject.com/en/%(version)s/ref/settings/#debug\" "
+"target=\"_blank\" rel=\"noopener\">DEBUG=True</a> is in your settings file "
+"and you have not configured any URLs."
 msgstr ""
 
 #: venv/lib/python3.11/site-packages/django/views/templates/default_urlconf.html:229

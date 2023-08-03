@@ -15,7 +15,7 @@
                         
                     
                     {% if user.username|are_equal:blog.author %}
-                    <a class="btn btn-warning" href="{% url 'blog_edit' blog.id %}">edit</a>
+                    <a class="btn btn-warning" href="{% url 'blog_edit' blog.id %}">{% trans 'edit' %}</a>
                     {% endif %}
                     {% endif %}
                 </div>
@@ -24,7 +24,7 @@
     </div>
 </div>
 
-<div class="container shadow"><p class="m-5">{{blog.text|linebreaks}}</p>
+<div class="container shadow"><p class="m-5">{{blog.text|safe|linebreaks}}</p>
 <span>{% trans ' by :' %} <b>{{blog.author}}</b></span>
 </div>
 

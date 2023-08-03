@@ -38,6 +38,14 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'django.contrib.sites',
+    'django.contrib.humanize',
+    # install app
+    'jalali_date',
+    'crispy_forms',
+    'crispy_bootstrap5',
+    'rosetta',
+    'mathfilters',
+    'ckeditor',
     # all auth
     'allauth',
     'allauth.account',
@@ -46,11 +54,9 @@ INSTALLED_APPS = [
     'accounts',
     'products',
     'blogs',
+    'cart',
+    'orders',
 
-    # install app
-    'crispy_forms',
-    'crispy_bootstrap5',
-    'rosetta',
 ]
 
 MIDDLEWARE = [
@@ -76,6 +82,8 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                #custom
+                'cart.cart_context.cart',
                 # `allauth` needs this from django
                 'django.template.context_processors.request',
 
@@ -124,9 +132,8 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/4.1/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
-# LANGUAGE_CODE = 'fa'
-
+# LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'fa'
 # TIME_ZONE = 'UTC'
 TIME_ZONE = 'Asia/Tehran'
 
@@ -164,6 +171,8 @@ EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 STATIC_URL = 'static/'
 STATICFILES_DIRS = [str(BASE_DIR.joinpath('static'))]
 
+STATIC_ROOT=BASE_DIR.joinpath('staticfiles')
+
 # media config
 
 MEDIA_URL = '/media/'
@@ -178,3 +187,12 @@ ACCOUNT_USERNAME_REQUIRED = True
 ACCOUNT_AUTHENTICATION_METHOD = 'username'
 ACCOUNT_EMAIL_REQUIRED = False
 ACCOUNT_UNIQUE_EMAIL = True
+
+
+#messages config
+
+from django.contrib.messages import constants as messages
+
+MESSAGE_TAGS = {
+    messages.ERROR: "danger",
+}
