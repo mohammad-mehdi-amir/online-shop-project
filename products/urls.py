@@ -24,5 +24,6 @@ urlpatterns = [
     path('new_product/',views.NewProductView.as_view(),name='new_prodcut'),
     path('<int:pk>/',views.ProductDetailView.as_view(),name='detail_product'),
     path('comment/<int:pk>/',views.CommentCreateView.as_view(),name='new_comment'),
+    path('search/',views.search_view,name='search'),
 
 ]

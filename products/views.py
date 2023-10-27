@@ -3,16 +3,19 @@ from django.contrib import messages
 from django.http import HttpResponse
 from django.shortcuts import render,get_object_or_404,redirect
 from django.urls import reverse
+from django.views.generic import *
+from django.utils.translation import gettext as _
+
 from .models import product,comment
 from .form import commentForm ,new_product_form
+from products import form
+from likes.models import like
+
 from cart.forms import AddToCartForm
-from django.views.generic import *
 from cart.cart import Cart
-from django.utils.translation import gettext as _
 # Create your views here.
 
 def home_view(request):
-    cart=Cart(request)
     return render(request,'home.html')
 
 class NewProductView(CreateView):
@@ -26,6 +29,10 @@ class ProductListView(ListView):
     paginate_by = 20
     template_name = 'products/list_product.html'
     context_object_name = 'products'
+    def get_context_data(self,*args, **kwargs):
+        context = super(ProductListView, self).get_context_data(*args,**kwargs)
+        context['likes'] = like.objects.all()
+        return context
 
 
 class ProductDetailView(DetailView):
@@ -53,23 +60,8 @@ class CommentCreateView(CreateView):
         return super().form_valid(form)
     
     
-
+def search_view(request):
+    word=request.POST['popup_search']
+    products1 = product.objects.filter(title__contains=word).filter(status=True)
+    return render(request,'products/list_product.html',{'products':products1})
     
-# def product_detail_view(request, pk):
-#     product1 = get_object_or_404(product, pk=pk)
-#     product_comments = product1.comments.all()
-    
-#     if request.method == "POST":
-
-#         comment_form=commentForm(request.POST)
-#         if comment_form.is_valid():
-#             new_comment=comment_form.save(commit=False)
-#             new_comment.product=product1
-#             new_comment.user=request.user
-#             new_comment.save()
-#             comment_form=commentForm()
-#             return redirect(product1)
-    
-#     else:
-#         comment_form=commentForm()
-#         return render(request, "products/detail_product.html", {'products': product1, 'comments': product_comments,'form':comment_form})

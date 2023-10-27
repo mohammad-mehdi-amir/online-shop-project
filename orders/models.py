@@ -1,13 +1,15 @@
 from django.db import models
 from django.contrib.auth import get_user_model
 from django.utils.translation import gettext_lazy as _
+from phonenumber_field.modelfields import PhoneNumberField
 class order(models.Model):
     
     user=models.ForeignKey(get_user_model(),on_delete=models.CASCADE)
     first_name=models.CharField(max_length=30,verbose_name=_('First Name :'))
     last_name=models.CharField(max_length=30,verbose_name=_('Last Name :'))
-    phone_number=models.CharField(max_length=15,verbose_name=_('Phone Number'))
+    phone_number= PhoneNumberField(null=False, blank=False)
     address=models.TextField(verbose_name=_('Address'))
+    email=models.EmailField()
     
     datetime_order=models.DateField(auto_now_add=True)
     datetime_order_modified=models.DateField(auto_now=True)

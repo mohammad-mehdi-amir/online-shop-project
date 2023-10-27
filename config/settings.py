@@ -46,6 +46,7 @@ INSTALLED_APPS = [
     'rosetta',
     'mathfilters',
     'ckeditor',
+    'phonenumber_field',
     # all auth
     'allauth',
     'allauth.account',
@@ -53,9 +54,9 @@ INSTALLED_APPS = [
     # my app
     'accounts',
     'products',
-    'blogs',
     'cart',
     'orders',
+    'likes', 
 
 ]
 
@@ -99,11 +100,19 @@ WSGI_APPLICATION = 'config.wsgi.application'
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
 
 DATABASES = {
+    # 'default': {
+    #     'ENGINE': 'django.db.backends.postgresql',
+    #     'NAME': 'postgres',
+    #     'PASSWORD': 'postgres',
+    #     'USER': 'postgres',
+    #     'HOST': 'db',
+    #     'PORT': 5432
+    # }
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'postgres',
-        'PASSWORD': 'postgres',
         'USER': 'postgres',
+        'PASSWORD': 'postgres',
         'HOST': 'db',
         'PORT': 5432
     }

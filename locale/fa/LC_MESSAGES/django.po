@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-08-02 12:28+0330\n"
-"PO-Revision-Date: 2023-08-02 12:30+0330\n"
+"POT-Creation-Date: 2023-08-03 16:53+0330\n"
+"PO-Revision-Date: 2023-08-03 16:53+0330\n"
 "Last-Translator:   <mm@mm.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: \n"
@@ -39,9 +39,10 @@ msgstr "تماس با ما"
 msgid "profile"
 msgstr "حساب کاربری"
 
-#: templates/_base.html:126 templates/_base.html:244
-msgid "go to cart"
-msgstr "اضافه به سبد خرید"
+#: templates/_base.html:126
+#| msgid "cart"
+msgid " cart"
+msgstr "سبد خرید"
 
 #: templates/_base.html:129
 msgid "wishlist"
@@ -63,22 +64,34 @@ msgstr "قوانین و مقررات |"
 msgid "Start typing and press Enter to search"
 msgstr "به دنبال چه میگردید؟"
 
-#: templates/_base.html:230 templates/cart/cart_detail.html:68
-#: templates/cart/cart_detail.html:137
-#: templates/products/detail_product.html:38
-#: templates/products/list_product.html:57
+#: templates/_base.html:212 templates/cart/cart_detail.html:18
+msgid "cart"
+msgstr "سبد خرید"
+
+#: templates/_base.html:231 templates/cart/cart_detail.html:71
+#: templates/cart/cart_detail.html:144 templates/likes/list_liked.html:63
+#: templates/orders/order_create.html:138
+#: templates/orders/order_create.html:150
+#: templates/products/detail_product.html:42
+#: templates/products/list_product.html:62
 msgid "$"
 msgstr "تومان"
 
-#: templates/_base.html:240 templates/cart/cart_detail.html:133
+#: templates/_base.html:241 templates/cart/cart_detail.html:139
+#: templates/orders/order_create.html:127
+#: templates/orders/order_create.html:147
 msgid "total price"
 msgstr "جمع کل"
 
-#: templates/_base.html:245
+#: templates/_base.html:245 templates/orders/order_create.html:20
+msgid "order"
+msgstr "ثبت سفارشات"
+
+#: templates/_base.html:246
 msgid "peyment"
 msgstr "پرداخت"
 
-#: templates/account/login.html:29 templates/products/detail_product.html:186
+#: templates/account/login.html:29 templates/products/detail_product.html:190
 msgid "login"
 msgstr "ورود"
 
@@ -90,7 +103,8 @@ msgstr "ویرایش"
 msgid " by :"
 msgstr "بوسیله :"
 
-#: templates/blogs/blog_edit.html:9 templates/products/detail_product.html:179
+#: templates/blogs/blog_edit.html:9 templates/orders/order_create.html:112
+#: templates/products/detail_product.html:183
 msgid "submit"
 msgstr "ارسال"
 
@@ -98,82 +112,125 @@ msgstr "ارسال"
 msgid "date created :"
 msgstr "تاريخ ساخت"
 
-#: templates/cart/cart_detail.html:17
-msgid "cart"
-msgstr "سبد خرید"
-
-#: templates/cart/cart_detail.html:81
+#: templates/cart/cart_detail.html:84
 msgid "update"
 msgstr "به روز رسانی"
 
-#: templates/cart/cart_detail.html:94
+#: templates/cart/cart_detail.html:101
 msgid "cart is empty"
 msgstr "سبد خرید خالی است"
 
-#: templates/cart/cart_detail.html:97
-#, fuzzy
-#| msgid "products"
+#: templates/cart/cart_detail.html:104
 msgid "go to products"
-msgstr "محصولات"
+msgstr "رفتن به محصولات"
 
-#: templates/cart/cart_detail.html:116
+#: templates/cart/cart_detail.html:122
 msgid "clean cart"
 msgstr "خالی کردن سبد خرید"
 
-#: templates/cart/cart_detail.html:144
+#: templates/cart/cart_detail.html:152
 msgid "submit orders"
 msgstr "ثبت سفارشات"
 
-#: templates/products/detail_product.html:14
-msgid "detail of product"
-msgstr "جزئیات محصول"
-
-#: templates/products/detail_product.html:51
-#: templates/products/list_product.html:72
+#: templates/likes/list_liked.html:78
+#: templates/products/detail_product.html:55
+#: templates/products/list_product.html:77
 msgid "Add to cart"
 msgstr "اضافه به سبد خرید"
 
-#: templates/products/detail_product.html:59
+#: templates/orders/order_create.html:36
+msgid "Detail order"
+msgstr "جزئیات  سفارشات"
+
+#: templates/orders/order_create.html:44
+msgid "First Name"
+msgstr "نام "
+
+#: templates/orders/order_create.html:47
+msgid "name"
+msgstr "نام"
+
+#: templates/orders/order_create.html:54 templates/orders/order_create.html:57
+msgid "Last Name"
+msgstr "نام خانوادگی"
+
+#: templates/orders/order_create.html:66 templates/orders/order_create.html:68
+msgid "Address"
+msgstr "آدرس"
+
+#: templates/orders/order_create.html:77 templates/orders/order_create.html:80
+msgid "Phone Number"
+msgstr "شماره تلفن"
+
+#: templates/orders/order_create.html:89
+msgid "email"
+msgstr "ایمیل"
+
+#: templates/orders/order_create.html:92
+msgid "Email"
+msgstr "ایمیل"
+
+#: templates/orders/order_create.html:101
+msgid "Order Note"
+msgstr "یادداشت سفارش"
+
+#: templates/orders/order_create.html:119
+msgid "your orders"
+msgstr "سفارشات شما"
+
+#: templates/orders/order_create.html:125
+msgid "product"
+msgstr "محصول"
+
+#: templates/orders/order_create.html:126
+msgid "quantity"
+msgstr "تعداد"
+
+#: templates/products/detail_product.html:18
+msgid "detail of product"
+msgstr "جزئیات محصول"
+
+#: templates/products/detail_product.html:63
 msgid "Category :"
 msgstr "دسته بندی"
 
-#: templates/products/detail_product.html:75
+#: templates/products/detail_product.html:79
 msgid "Product description"
 msgstr "توضیحات محصول"
 
-#: templates/products/detail_product.html:79
+#: templates/products/detail_product.html:83
 msgid "Propertes"
 msgstr "ویژگی"
 
-#: templates/products/detail_product.html:83
+#: templates/products/detail_product.html:87
 msgid "comments"
 msgstr "دیدگاه"
 
-#: templates/products/detail_product.html:99
+#: templates/products/detail_product.html:103
 msgid "Weight"
 msgstr "وزن"
 
-#: templates/products/detail_product.html:100
+#: templates/products/detail_product.html:104
 msgid "grams"
 msgstr "گرم"
 
-#: templates/products/detail_product.html:103
+#: templates/products/detail_product.html:107
 msgid "size"
 msgstr "سایز"
 
-#: templates/products/detail_product.html:107
+#: templates/products/detail_product.html:111
 msgid "colors"
 msgstr "رنگ"
 
-#: templates/products/detail_product.html:123
+#: templates/products/detail_product.html:127
 msgid "comments for"
 msgstr " دیدگاه برای "
 
-#: templates/products/detail_product.html:167
+#: templates/products/detail_product.html:171
 msgid "write your comment"
 msgstr "دیدگاه خود را بنویسید"
 
-#: templates/products/detail_product.html:186
+#: templates/products/detail_product.html:190
 msgid "for write  comment please"
 msgstr "برای نوشتن کامنت لطفا"
 
@@ -1386,3 +1443,12 @@ msgstr ""
 #: venv/lib/python3.11/site-packages/django/views/templates/default_urlconf.html:248
 msgid "Connect, get help, or contribute"
 msgstr ""
+
+#~ msgid "go to cart"
+#~ msgstr "اضافه به سبد خرید"
+
+#~ msgid "Last Name :"
+#~ msgstr "نام خانوادگی"
+
+#~ msgid "Do You Have Any Note For This Order?"
+#~ msgstr "برای این سفارش یادداشتی دارید؟"

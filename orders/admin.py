@@ -6,12 +6,12 @@ from .models import order,order_item
 class orderInLine(admin.TabularInline):
     model=order_item
     fields=['order','product','quantity','price']
-    extra=1
+    extra=0
 
 
 @admin.register(order)
 class orderAdmin(ModelAdmin):
-    list_display=['user','first_name','last_name','phone_number','address','is_payed']
+    list_display=['user','first_name','last_name','phone_number','address','email','is_payed']
     inlines=[
         orderInLine,
     ]

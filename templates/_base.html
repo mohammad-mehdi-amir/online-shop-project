@@ -49,7 +49,7 @@
 </head>
 
 
-<body dir="rtl">
+<body dir="rtl"  class="d-flex flex-column p-0 col-12 h-100 justify-content-between ">
 
     
     
@@ -61,7 +61,7 @@
         </ul>
         {% endif %} -->
         
-        <header class="header shadow-sm  p-3 mb-5 bg-white rounded">
+        <header class="header shadow-sm  p-3 mb-5 bg-white rounded" >
             <div class="header-inner fixed-header ">
                 <div class="container">
                     <div class="row align-items-center">
@@ -82,11 +82,7 @@
                                                 <span class="mm-text">{% trans 'home' %}</span>
                                             </a>
                                         </li>
-                                        <li class="mainmenu__item menu-item-has-children">
-                                            <a href="{% url 'blog_list' %}" class="mainmenu__link">
-                                                <span class="mm-text">{% trans 'weblog' %}</span>
-                                            </a>
-                                        </li>
+                                        
                                         <li class="mainmenu__item menu-item-has-children">
                                             <a href="{% url 'list_prodcut' %}" class="mainmenu__link">
                                                 <span class="mm-text">{% trans 'products' %}</span>
@@ -104,7 +100,7 @@
                     <div class="col-xl-3 col-lg-4 col-sm-7 col-12 p-0">
                         <ul class="header-toolbar">
                             <li class="header-toolbar__item">
-                                <a href="wishlist.html" class="header-toolbar__btn mx-4">
+                                <a href="{% url 'list_like' %}" class="header-toolbar__btn mx-4">
                                     <i class="flaticon flaticon-like"></i>
                                 </a>
                             </li>
@@ -123,10 +119,10 @@
                                         <a class="text-right" href="my-account.html">{% trans 'profile' %}</a>
                                     </li>
                                     <li>
-                                        <a class="text-right" href="{% url 'cart:cart_detail' %}">{% trans 'go to cart' %}</a>
+                                        <a class="text-right" href="{% url 'cart:cart_detail' %}">{% trans ' cart' %}</a>
                                     </li>
                                     <li>
-                                        <a class="text-right" href="wishlist.html">{% trans 'wishlist' %}</a>
+                                        <a class="text-right" href="{% url 'list_like' %}">{% trans 'wishlist' %}</a>
                                     </li>
                                     <li>
                                         <a class="text-right" href="order-tracking.html">{% trans 'order history' %}</a>
@@ -195,8 +191,9 @@
         <a href="#" class="btn-close"><i class="flaticon flaticon-cross"></i></a>
         <div class="searchform__body">
             <p>{% trans 'Start typing and press Enter to search' %}</p>
-            <form class="searchform">
-                <input type="text" name="popup-search" id="popup-search" class="searchform__input" placeholder="Search Entire Store...">
+            <form method="POST" action="{% url 'search' %}" class="searchform">
+                {% csrf_token %}
+                <input type="text" name="popup_search" id="popup-search" class="searchform__input" placeholder="Search Entire Store...">
                 <button type="submit" class="searchform__submit"><i class="flaticon flaticon-magnifying-glass-icon"></i></button>
             </form>
         </div>
@@ -208,7 +205,7 @@
         <div class="mini-cart-wrapper">
             <a href="" class="btn-close"><i class="flaticon flaticon-cross"></i></a>
             <div class="mini-cart-inner">
-                <h3 class="mini-cart__heading mb--40 mb-lg--30 text-right">سبد خرید</h3>
+                <h3 class="mini-cart__heading mb--40 mb-lg--30 text-right">{% trans 'cart' %}</h3>
                 <div class="mini-cart__content">
                     <ul class="mini-cart__list text-right">
                         
@@ -241,7 +238,7 @@
                         <span class="ammount">{{cart.get_total_price}}</span>
                     </div>
                     <div class="mini-cart__buttons">
-                        <a href="{% url 'cart:cart_detail' %}" class="btn btn-fullwidth btn-bg-sand mb--20">{% trans 'go to cart' %}</a>
+                        <a href="{% url 'order_create' %}" class="btn btn-fullwidth btn-bg-sand mb--20">{% trans 'order' %}</a>
                         <a href="checkout.html" class="btn btn-fullwidth btn-bg-sand">{% trans 'peyment' %}</a>
                     </div>
                 </div>

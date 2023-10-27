@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-08-02 12:28+0330\n"
+"POT-Creation-Date: 2023-08-03 16:52+0330\n"
 "PO-Revision-Date: 2023-08-02 11:46+0330\n"
 "Last-Translator:   <mm@mm.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -19,34 +19,34 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 "X-Translated-Using: django-rosetta 0.9.9\n"
 
-#: products/models.py:32
+#: products/models.py:42
 msgid "very bad"
 msgstr "خیلی بد"
 
-#: products/models.py:33
+#: products/models.py:43
 msgid "bad"
 msgstr "بد"
 
-#: products/models.py:34
+#: products/models.py:44
 msgid "normal"
 msgstr "معمولی"
 
-#: products/models.py:35
+#: products/models.py:45
 msgid "good"
 msgstr "خوب"
 
-#: products/models.py:36
+#: products/models.py:46
 msgid "very good"
 msgstr "خیلی خوب"
 
-#: products/models.py:38
+#: products/models.py:48
 msgid "write your comment"
 msgstr "دیدگاه خود را وارد کنید"
 
-#: products/models.py:42
+#: products/models.py:52
 msgid "rate this product"
 msgstr "به این محصول امتیاز بدهید"
 
-#: products/views.py:47
+#: products/views.py:48
 msgid "your comment sended"
 msgstr "دیدگاه شما ارسال شد"
