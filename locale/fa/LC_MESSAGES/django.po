@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-08-03 16:53+0330\n"
-"PO-Revision-Date: 2023-08-03 16:53+0330\n"
+"POT-Creation-Date: 2023-10-28 00:26+0330\n"
+"PO-Revision-Date: 2023-10-28 00:28+0330\n"
 "Last-Translator:   <mm@mm.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: \n"
@@ -23,75 +23,70 @@ msgstr ""
 msgid "home"
 msgstr "خانه"
 
-#: templates/_base.html:87
-msgid "weblog"
-msgstr "وبلاگ"
-
-#: templates/_base.html:92
+#: templates/_base.html:88
 msgid "products"
 msgstr "محصولات"
 
-#: templates/_base.html:97 templates/_base.html:180
+#: templates/_base.html:93 templates/_base.html:176
 msgid "contact us"
 msgstr "تماس با ما"
 
-#: templates/_base.html:123
+#: templates/_base.html:119
 msgid "profile"
 msgstr "حساب کاربری"
 
-#: templates/_base.html:126
-#| msgid "cart"
+#: templates/_base.html:122
 msgid " cart"
 msgstr "سبد خرید"
 
-#: templates/_base.html:129
+#: templates/_base.html:125
 msgid "wishlist"
 msgstr "علاقه مندي ها"
 
-#: templates/_base.html:132
+#: templates/_base.html:128
 msgid "order history"
 msgstr "تاریخچه سفارشات"
 
-#: templates/_base.html:178
+#: templates/_base.html:174
 msgid "about us"
 msgstr "درباره ما"
 
-#: templates/_base.html:179
+#: templates/_base.html:175
 msgid "Terms and Conditions |"
 msgstr "قوانین و مقررات |"
 
-#: templates/_base.html:197
+#: templates/_base.html:193
 msgid "Start typing and press Enter to search"
 msgstr "به دنبال چه میگردید؟"
 
-#: templates/_base.html:212 templates/cart/cart_detail.html:18
+#: templates/_base.html:208 templates/cart/cart_detail.html:18
 msgid "cart"
 msgstr "سبد خرید"
 
-#: templates/_base.html:231 templates/cart/cart_detail.html:71
-#: templates/cart/cart_detail.html:144 templates/likes/list_liked.html:63
+#: templates/_base.html:227 templates/cart/cart_detail.html:71
+#: templates/cart/cart_detail.html:144 templates/likes/list_liked.html:67
 #: templates/orders/order_create.html:138
 #: templates/orders/order_create.html:150
-#: templates/products/detail_product.html:42
-#: templates/products/list_product.html:62
+#: templates/products/detail_product.html:46
+#: templates/products/list_product.html:76
 msgid "$"
 msgstr "تومان"
 
-#: templates/_base.html:241 templates/cart/cart_detail.html:139
+#: templates/_base.html:237 templates/cart/cart_detail.html:139
 #: templates/orders/order_create.html:127
 #: templates/orders/order_create.html:147
 msgid "total price"
 msgstr "جمع کل"
 
-#: templates/_base.html:245 templates/orders/order_create.html:20
+#: templates/_base.html:241 templates/orders/order_create.html:20
 msgid "order"
 msgstr "ثبت سفارشات"
 
-#: templates/_base.html:246
+#: templates/_base.html:242
 msgid "peyment"
 msgstr "پرداخت"
 
-#: templates/account/login.html:29 templates/products/detail_product.html:190
+#: templates/account/login.html:29 templates/products/detail_product.html:199
 msgid "login"
 msgstr "ورود"
 
@@ -104,7 +99,7 @@ msgid " by :"
 msgstr "بوسیله :"
 
 #: templates/blogs/blog_edit.html:9 templates/orders/order_create.html:112
-#: templates/products/detail_product.html:183
+#: templates/products/detail_product.html:192
 msgid "submit"
 msgstr "ارسال"
 
@@ -132,9 +127,9 @@ msgstr "خالی کردن سبد خرید"
 msgid "submit orders"
 msgstr "ثبت سفارشات"
 
-#: templates/likes/list_liked.html:78
-#: templates/products/detail_product.html:55
-#: templates/products/list_product.html:77
+#: templates/likes/list_liked.html:82
+#: templates/products/detail_product.html:59
+#: templates/products/list_product.html:91
 msgid "Add to cart"
 msgstr "اضافه به سبد خرید"
 
@@ -158,9 +153,13 @@ msgstr "نام خانوادگی"
 msgid "Address"
 msgstr "آدرس"
 
-#: templates/orders/order_create.html:77 templates/orders/order_create.html:80
+#: templates/orders/order_create.html:77
 msgid "Phone Number"
 msgstr "شماره تلفن"
+
+#: templates/orders/order_create.html:80
+msgid "enter valid  phone number (like +12125552368)"
+msgstr "یک شماره معتبر وارد کنید (مانند +12125552368  )"
 
 #: templates/orders/order_create.html:89
 msgid "email"
@@ -190,49 +189,108 @@ msgstr "تعداد"
 msgid "detail of product"
 msgstr "جزئیات محصول"
 
-#: templates/products/detail_product.html:63
-msgid "Category :"
-msgstr "دسته بندی"
+#: templates/products/detail_product.html:68
+msgid "unavailable"
+msgstr "ناموجود"
 
-#: templates/products/detail_product.html:79
+#: templates/products/detail_product.html:75
+msgid "Category :"
+msgstr "دسته بندی :"
+
+#: templates/products/detail_product.html:88
 msgid "Product description"
 msgstr "توضیحات محصول"
 
-#: templates/products/detail_product.html:83
+#: templates/products/detail_product.html:92
 msgid "Propertes"
 msgstr "ویژگی"
 
-#: templates/products/detail_product.html:87
+#: templates/products/detail_product.html:96
 msgid "comments"
 msgstr "دیدگاه"
 
-#: templates/products/detail_product.html:103
+#: templates/products/detail_product.html:112
 msgid "Weight"
 msgstr "وزن"
 
-#: templates/products/detail_product.html:104
+#: templates/products/detail_product.html:113
 msgid "grams"
 msgstr "گرم"
 
-#: templates/products/detail_product.html:107
+#: templates/products/detail_product.html:116
 msgid "size"
 msgstr "سایز"
 
-#: templates/products/detail_product.html:111
+#: templates/products/detail_product.html:120
 msgid "colors"
 msgstr "رنگ"
 
-#: templates/products/detail_product.html:127
+#: templates/products/detail_product.html:136
 msgid "comments for"
 msgstr " دیدگاه برای "
 
-#: templates/products/detail_product.html:171
+#: templates/products/detail_product.html:180
 msgid "write your comment"
 msgstr "دیدگاه خود را بنویسید"
 
-#: templates/products/detail_product.html:190
+#: templates/products/detail_product.html:199
 msgid "for write  comment please"
 msgstr "برای نوشتن کامنت لطفا"
+
+#: templates/products/list_product.html:98
+msgid "unavlailable"
+msgstr "ناموجود"
+
+#: venv/lib/python3.11/site-packages/ckeditor_uploader/forms.py:6
+msgid "Search files"
+msgstr ""
+
+#: venv/lib/python3.11/site-packages/ckeditor_uploader/templates/ckeditor/browse.html:5
+msgid "Select an image to embed"
+msgstr ""
+
+#: venv/lib/python3.11/site-packages/ckeditor_uploader/templates/ckeditor/browse.html:27
+msgid "Browse for the image you want, then click 'Embed Image' to continue..."
+msgstr ""
+
+#: venv/lib/python3.11/site-packages/ckeditor_uploader/templates/ckeditor/browse.html:29
+msgid ""
+"No images found. Upload images using the 'Image Button' dialog's 'Upload' "
+"tab."
+msgstr ""
+
+#: venv/lib/python3.11/site-packages/ckeditor_uploader/templates/ckeditor/browse.html:50
+msgid "Images in: "
+msgstr ""
+
+#: venv/lib/python3.11/site-packages/ckeditor_uploader/templates/ckeditor/browse.html:62
+#: venv/lib/python3.11/site-packages/ckeditor_uploader/templates/ckeditor/browse.html:80
+msgid "Embed Image"
+msgstr ""
+
+#: venv/lib/python3.11/site-packages/ckeditor_uploader/templates/ckeditor/browse.html:146
+msgid "Play Slideshow"
+msgstr ""
+
+#: venv/lib/python3.11/site-packages/ckeditor_uploader/templates/ckeditor/browse.html:147
+msgid "Pause Slideshow"
+msgstr ""
+
+#: venv/lib/python3.11/site-packages/ckeditor_uploader/templates/ckeditor/browse.html:148
+msgid "&lsaquo; Previous Photo"
+msgstr ""
+
+#: venv/lib/python3.11/site-packages/ckeditor_uploader/templates/ckeditor/browse.html:149
+msgid "Next Photo &rsaquo;"
+msgstr ""
+
+#: venv/lib/python3.11/site-packages/ckeditor_uploader/templates/ckeditor/browse.html:150
+msgid "Next &rsaquo;"
+msgstr ""
+
+#: venv/lib/python3.11/site-packages/ckeditor_uploader/templates/ckeditor/browse.html:151
+msgid "&lsaquo; Prev"
+msgstr ""
 
 #: venv/lib/python3.11/site-packages/django/contrib/messages/apps.py:15
 msgid "Messages"
@@ -866,6 +924,8 @@ msgid "Currently"
 msgstr ""
 
 #: venv/lib/python3.11/site-packages/django/forms/widgets.py:465
+#: venv/lib/python3.11/site-packages/jalali_date/templates/admin/edit_inline/jalali_stacked.html:12
+#: venv/lib/python3.11/site-packages/jalali_date/templates/admin/edit_inline/jalali_tabular.html:34
 msgid "Change"
 msgstr ""
 
@@ -1443,6 +1503,34 @@ msgstr ""
 #: venv/lib/python3.11/site-packages/django/views/templates/default_urlconf.html:248
 msgid "Connect, get help, or contribute"
 msgstr ""
+
+#: venv/lib/python3.11/site-packages/jalali_date/templates/admin/edit_inline/jalali_stacked.html:12
+#: venv/lib/python3.11/site-packages/jalali_date/templates/admin/edit_inline/jalali_tabular.html:34
+msgid "View"
+msgstr ""
+
+#: venv/lib/python3.11/site-packages/jalali_date/templates/admin/edit_inline/jalali_stacked.html:14
+#: venv/lib/python3.11/site-packages/jalali_date/templates/admin/edit_inline/jalali_tabular.html:36
+msgid "View on site"
+msgstr ""
+
+#: venv/lib/python3.11/site-packages/jalali_date/templates/admin/edit_inline/jalali_tabular.html:20
+msgid "Delete?"
+msgstr ""
+
+#: venv/lib/python3.11/site-packages/jalali_date/widgets.py:49
+msgid "Date:"
+msgstr ""
+
+#: venv/lib/python3.11/site-packages/jalali_date/widgets.py:49
+msgid "Time:"
+msgstr ""
+
+#~ msgid "یک شماره تماس معتبر وارد نمایید (مانند +12125552368)."
+#~ msgstr "enter valid  phone number (like +12125552368)"
+
+#~ msgid "weblog"
+#~ msgstr "وبلاگ"
 
 #~ msgid "go to cart"
 #~ msgstr "اضافه به سبد خرید"

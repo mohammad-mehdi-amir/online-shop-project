@@ -26,12 +26,13 @@ class NewProductView(CreateView):
 
 class ProductListView(ListView):
     model = product
-    paginate_by = 20
+    paginate_by = 4
     template_name = 'products/list_product.html'
     context_object_name = 'products'
     def get_context_data(self,*args, **kwargs):
         context = super(ProductListView, self).get_context_data(*args,**kwargs)
         context['likes'] = like.objects.all()
+        
         return context
 
 
@@ -44,6 +45,8 @@ class ProductDetailView(DetailView):
         context=super().get_context_data(**kwargs)
         context['comment_form']=commentForm()
         context['add_to_cart_form']=AddToCartForm()
+        context['comments']=comment.object.filter(active=True)
+        
         return context
 
 

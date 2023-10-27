@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-08-03 13:14+0330\n"
+"POT-Creation-Date: 2023-10-28 00:27+0330\n"
 "PO-Revision-Date: 2023-08-03 13:16+0330\n"
 "Last-Translator:   <mm@mm.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -19,30 +19,30 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 "X-Translated-Using: django-rosetta 0.9.9\n"
 
-#: orders/models.py:8
+#: models.py:8
 msgid "First Name :"
 msgstr "نام "
 
-#: orders/models.py:9
+#: models.py:9
 msgid "Last Name :"
 msgstr "نام خانوادگی"
 
-#: orders/models.py:11
+#: models.py:11
 msgid "Address"
 msgstr "آدرس"
 
-#: orders/models.py:19
+#: models.py:19
 msgid "Do You Have Any Note For This Order?"
 msgstr "یادداشتی برای این سفارش دارید؟"
 
-#: orders/views.py:20
+#: views.py:20
 msgid "your order has been registered"
 msgstr "سفارش شما ثبت شد"
 
-#: orders/views.py:32
+#: views.py:32
 msgid "your cart is empty"
 msgstr "سبد خرید شما خالی است"
 
-#: orders/views.py:39
+#: views.py:39
 msgid "your order has not been registered, please try again"
 msgstr "سفارش شما ثبت نشد, لطفا دوباره تلاش کنید"

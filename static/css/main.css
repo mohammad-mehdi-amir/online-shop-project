@@ -175,6 +175,7 @@ figure {
 
 img {
   max-width: 100%;
+  -webkit-filter: grayscale(100%);
 }
 
 a:hover {
@@ -5011,7 +5012,11 @@ textarea,
 .product-image {
   overflow: hidden;
 }
-
+.gray-filter{
+    filter: grayscale(100);
+    -webkit-filter: grayscale(100);
+    
+}
 .product-image a {
   display: block;
 }

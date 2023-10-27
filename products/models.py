@@ -1,3 +1,6 @@
+from operator import mod
+from pyexpat import model
+from turtle import mode
 from django.db import models
 from django.urls import reverse
 from django.contrib.auth import get_user_model
@@ -6,16 +9,29 @@ from ckeditor.fields import RichTextField
 
 # Create your models here.
 
+class category(models.Model):
+    image = models.ImageField(upload_to="category_img/",blank=True)
+    title= models.CharField(max_length=50)
+    descriptions= RichTextField()
+    
+    def __str__(self) -> str:
+        return self.title
+
 
 class product(models.Model):
+    
+    
     title = models.CharField(max_length=100)
     des = RichTextField()
 
+    category_product=models.ForeignKey(category,on_delete=models.PROTECT,blank=True,null=True,related_name='product')
+    
     datetime_add = models.DateTimeField(auto_now_add=True)
     datetime_edit = models.DateTimeField(auto_now=True)
 
     price = models.PositiveIntegerField()
     status = models.BooleanField(default=True)
+    inventory=models.IntegerField(default=10)
 
     image = models.ImageField(upload_to="product_img/")
     seller = models.CharField(max_length=100)

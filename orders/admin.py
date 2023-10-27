@@ -16,6 +16,6 @@ class orderAdmin(ModelAdmin):
         orderInLine,
     ]
     
-@admin.register(order_item) 
-class order_itemAdmin(ModelAdmin):
-    list_display=['order','product','quantity','price']
+# @admin.register(order_item) 
+# class order_itemAdmin(ModelAdmin):
+#     list_display=['order','product','quantity','price']
